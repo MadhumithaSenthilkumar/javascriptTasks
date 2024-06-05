@@ -1,0 +1,21 @@
+<input id="container">
+<button onclick="add()">Add</button>
+<ul id="unordered">
+    <li>Hello
+    <button onclick="deleteItem(event)">Delete</button>
+    </li>
+</ul>
+<script>
+    var upper=document.getElementById("container")
+    var order=document.getElementById("unordered")
+    function add()
+    {
+    var list=document.createElement("li")
+    list.innerHTML=upper.value+"<button onclick='deleteItem(event)'>Delete</button>"
+    order.append(list)
+    }
+    function deleteItem(event)
+    {
+        event.target.parentElement.remove()
+    }
+</script>

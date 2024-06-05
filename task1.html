@@ -1,0 +1,11 @@
+<button onclick="update()">ADD</button>
+<div id="new"></div>
+<script>
+    var div=document.getElementById("new")
+    function update()
+    {
+      var listitem=document.createElement("h1")
+      listitem.textContent="Hello"
+      div.append(listitem)
+    }
+</script>
